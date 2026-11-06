@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "seed": 20261106,
+  "groups": 600,
+  "rows": 4800,
+  "origin": "Entirely synthetic. No scraped listings, observed prices, real coordinates, personal records or property offers.",
+  "split": "Disjoint building/entity groups: 70% train, 15% validation, 15% test. Preserve these splits.",
+  "license": "CC0-1.0",
+  "files": {
+    "pairs.csv": "1d422790093b6ebc9806adcc03f1e94db036e50ed5b28a225010133f5040ea30",
+    "raw_pairs.jsonl": "42fdff63df5321879067337bbd7500b5db68177fdc8d563e868c45d571761220"
+  }
+}

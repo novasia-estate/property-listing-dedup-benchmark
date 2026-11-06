@@ -1,0 +1,154 @@
+{
+  "version": "1.0.0",
+  "kind": "synthetic_stress_test_not_market_accuracy",
+  "training": "batch logistic regression, 400 epochs, lr .7, L2 .002 except intercept",
+  "feature_order": [
+    "title_jaccard",
+    "area_similarity",
+    "price_similarity",
+    "location_similarity",
+    "bedrooms_equal",
+    "floor_equal",
+    "area_missing",
+    "price_missing",
+    "floor_missing"
+  ],
+  "weights": [
+    -1.5190107542231785,
+    0.0159967959423397,
+    0.20916100727394643,
+    0.03443978738441636,
+    -0.2103620449220079,
+    -1.0749538173832096,
+    3.4020685429880304,
+    -0.1057049144109601,
+    -0.035273046158208234,
+    2.3349623086485467
+  ],
+  "validation_selected_threshold": 0.2,
+  "splits": {
+    "train": {
+      "logistic": {
+        "confusion": {
+          "tp": 1680,
+          "fp": 895,
+          "tn": 785,
+          "fn": 0
+        },
+        "precision": 0.6524271844660194,
+        "recall": 1.0,
+        "f1": 0.7896592244418331,
+        "accuracy": 0.7336309523809523,
+        "count": 3360
+      },
+      "simple_rule": {
+        "confusion": {
+          "tp": 392,
+          "fp": 185,
+          "tn": 1495,
+          "fn": 1288
+        },
+        "precision": 0.6793760831889082,
+        "recall": 0.23333333333333334,
+        "f1": 0.34736375719982276,
+        "accuracy": 0.5616071428571429,
+        "count": 3360
+      },
+      "always_duplicate": {
+        "confusion": {
+          "tp": 1680,
+          "fp": 1680,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.5,
+        "count": 3360
+      }
+    },
+    "validation": {
+      "logistic": {
+        "confusion": {
+          "tp": 360,
+          "fp": 190,
+          "tn": 170,
+          "fn": 0
+        },
+        "precision": 0.6545454545454545,
+        "recall": 1.0,
+        "f1": 0.7912087912087912,
+        "accuracy": 0.7361111111111112,
+        "count": 720
+      },
+      "simple_rule": {
+        "confusion": {
+          "tp": 82,
+          "fp": 33,
+          "tn": 327,
+          "fn": 278
+        },
+        "precision": 0.7130434782608696,
+        "recall": 0.22777777777777777,
+        "f1": 0.3452631578947368,
+        "accuracy": 0.5680555555555555,
+        "count": 720
+      },
+      "always_duplicate": {
+        "confusion": {
+          "tp": 360,
+          "fp": 360,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.5,
+        "count": 720
+      }
+    },
+    "test": {
+      "logistic": {
+        "confusion": {
+          "tp": 360,
+          "fp": 178,
+          "tn": 182,
+          "fn": 0
+        },
+        "precision": 0.6691449814126395,
+        "recall": 1.0,
+        "f1": 0.801781737193764,
+        "accuracy": 0.7527777777777778,
+        "count": 720
+      },
+      "simple_rule": {
+        "confusion": {
+          "tp": 84,
+          "fp": 30,
+          "tn": 330,
+          "fn": 276
+        },
+        "precision": 0.7368421052631579,
+        "recall": 0.23333333333333334,
+        "f1": 0.35443037974683544,
+        "accuracy": 0.575,
+        "count": 720
+      },
+      "always_duplicate": {
+        "confusion": {
+          "tp": 360,
+          "fp": 360,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.5,
+        "count": 720
+      }
+    }
+  }
+}
