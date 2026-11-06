@@ -36,8 +36,9 @@ def observation(unit, rng):
     record['area'] = round(unit['area'] * rng.uniform(.94, 1.06), 1) if rng.random() > .08 else None
     record['price'] = round(unit['price'] * rng.uniform(.83, 1.17)) if rng.random() > .06 else None
     record['floor'] = unit['floor'] if rng.random() > .12 else None
-    record['x'] += rng.gauss(0, 45)
-    record['y'] += rng.gauss(0, 45)
+    # Quantise insignificant libm differences across operating systems.
+    record['x'] = round(record['x'] + rng.gauss(0, 45), 6)
+    record['y'] = round(record['y'] + rng.gauss(0, 45), 6)
     # Copy-like agent headlines can describe different units in the same building.
     templates = ['bright apartment {beds} bedrooms', 'residence {beds} bed city view',
                  'spacious home {beds} bedroom', 'modern apartment {beds} bedrooms']
@@ -113,7 +114,7 @@ def evaluate(rows):
     threshold=max(thresholds,key=lambda t:metrics([int(r['is_duplicate']) for r in validation],[predict(weights,r) for r in validation],t)['f1'])
     result=dict(version=VERSION,kind='synthetic_stress_test_not_market_accuracy',
                 training='batch logistic regression, 400 epochs, lr .7, L2 .002 except intercept',
-                feature_order=FEATURES,weights=weights,validation_selected_threshold=threshold,splits={})
+                feature_order=FEATURES,weights=[round(w,12) for w in weights],validation_selected_threshold=threshold,splits={})
     for split,data in splits.items():
         y=[int(r['is_duplicate']) for r in data]
         rule=[float(float(r['area_similarity'])>.95 and float(r['price_similarity'])>.9 and float(r['location_similarity'])>.3 and float(r['bedrooms_equal'])==1) for r in data]

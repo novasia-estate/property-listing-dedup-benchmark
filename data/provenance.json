@@ -7,7 +7,7 @@
   "split": "Disjoint building/entity groups: 70% train, 15% validation, 15% test. Preserve these splits.",
   "license": "CC0-1.0",
   "files": {
-    "pairs.csv": "1d422790093b6ebc9806adcc03f1e94db036e50ed5b28a225010133f5040ea30",
-    "raw_pairs.jsonl": "42fdff63df5321879067337bbd7500b5db68177fdc8d563e868c45d571761220"
+    "pairs.csv": "92cd7912004ae7fe70320cc98277bbc877107c92c344ae3ace703d1db0f44f82",
+    "raw_pairs.jsonl": "4debbfbc669bf37e7f6ef53a87b1fbe1da1a48f199073c93c501e4e9ec41358c"
   }
 }
