@@ -12,6 +12,7 @@ jobs:
           python-version: '3.12'
       - run: python -m unittest discover -s tests -v
       - run: python src/benchmark.py generate --data data
-      - run: git diff --exit-code -- data
+      - run: python src/challenge.py --data data --report reports/challenge.json
+      - run: git diff --exit-code -- data reports/challenge.json
       - run: python src/benchmark.py evaluate --data data --report reports/baseline.json
       - run: git diff --exit-code -- reports

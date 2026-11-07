@@ -9,3 +9,7 @@ Baselines: always-positive; a transparent conjunction of area, price, location a
 Report confusion matrix, precision, recall, F1, accuracy and row count for each split. A false positive here means merging two different invented units, an error that could erase a real listing in a production catalogue. A false negative retains a duplicate. Their business costs are different and are not estimated by this benchmark.
 
 Identifiers, split, target and generation scenario are prohibited predictors. Group-separated benchmark scores are not interchangeable with random row cross-validation. Benchmark changes after looking at test results require a new version and a fresh held-out evaluation; do not silently reuse a tuned-on test set as independent validation.
+
+## Release1.2 supplement
+
+The original4,800-row benchmark is frozen. `pairs-1.2.csv` appends16 authored rows whose split is `challenge`; exclude them from every original training, validation and test metric. `challenge_pairs.jsonl` stores reference truth outside observations for audit only. Collision groups and the table-specific feature-only error bound are in `reports/challenge.json`; they are diagnostic, not empirical market performance. See the README for reproduction and forbidden input fields.

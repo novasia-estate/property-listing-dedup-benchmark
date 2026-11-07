@@ -15,3 +15,7 @@ Metadata: `pair_id` is a unique opaque row identifier. `entity_group` groups com
 | floor_missing | 1 if either floor missing |
 
 All features lie in [0,1]. Similarities are rounded to eight decimals in the CSV. Raw observations include the synthetic input values. The raw `scenario` describes generation and is forbidden as a predictor. Zero similarity and missingness have different meanings; preserve the flags.
+
+## Release1.2 supplement
+
+The original4,800-row benchmark is frozen. `pairs-1.2.csv` appends16 authored rows whose split is `challenge`; exclude them from every original training, validation and test metric. `challenge_pairs.jsonl` stores reference truth outside observations for audit only. Collision groups and the table-specific feature-only error bound are in `reports/challenge.json`; they are diagnostic, not empirical market performance. See the README for reproduction and forbidden input fields.

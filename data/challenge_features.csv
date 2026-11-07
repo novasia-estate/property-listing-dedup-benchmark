@@ -1,0 +1,17 @@
+pair_id,entity_group,split,title_jaccard,area_similarity,price_similarity,location_similarity,bedrooms_equal,floor_equal,area_missing,price_missing,floor_missing,is_duplicate
+challenge-001,challenge-001,challenge,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1
+challenge-002,challenge-002,challenge,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0
+challenge-003,challenge-003,challenge,1.0,0.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,1
+challenge-004,challenge-004,challenge,1.0,0.0,0.0,1.0,1.0,0.0,1.0,1.0,1.0,0
+challenge-005,challenge-005,challenge,0.33333333,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1
+challenge-006,challenge-006,challenge,0.33333333,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0
+challenge-007,challenge-007,challenge,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1
+challenge-008,challenge-008,challenge,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0
+challenge-009,challenge-009,challenge,1.0,1.0,0.4,2.006e-05,1.0,1.0,0.0,0.0,0.0,1
+challenge-010,challenge-010,challenge,0.0,1.0,1.0,0.98019867,1.0,1.0,0.0,0.0,0.0,0
+challenge-011,challenge-011,challenge,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1
+challenge-012,challenge-012,challenge,1.0,1.0,0.0,1.0,1.0,1.0,0.0,1.0,0.0,0
+challenge-013,challenge-013,challenge,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1
+challenge-014,challenge-014,challenge,0.33333333,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0
+challenge-015,challenge-015,challenge,0.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,1
+challenge-016,challenge-016,challenge,1.0,1.0,1.0,0.99004983,1.0,0.0,0.0,0.0,1.0,0

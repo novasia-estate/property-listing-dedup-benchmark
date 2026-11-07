@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this synthetic benchmark, please cite the version and seed."
 type: dataset
 title: "Property Listing Deduplication Benchmark: Synthetic Group-Separated Stress Test"
-version: 1.0.0
-date-released: 2026-11-06
+version: 1.2.0
+date-released: 2026-11-07
 authors:
   - name: NovAsia Estate
 url: https://github.com/novasia-estate/property-listing-dedup-benchmark

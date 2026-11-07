@@ -1,0 +1,69 @@
+{
+  "feature_count": 9,
+  "cases": 16,
+  "conflicting_feature_groups": [
+    {
+      "case_ids": [
+        "challenge-001",
+        "challenge-002"
+      ],
+      "labels": [
+        1,
+        0
+      ]
+    },
+    {
+      "case_ids": [
+        "challenge-003",
+        "challenge-004"
+      ],
+      "labels": [
+        1,
+        0
+      ]
+    },
+    {
+      "case_ids": [
+        "challenge-005",
+        "challenge-006",
+        "challenge-014"
+      ],
+      "labels": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "case_ids": [
+        "challenge-007",
+        "challenge-008",
+        "challenge-013",
+        "challenge-015"
+      ],
+      "labels": [
+        1,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "minimum_mistakes_for_deterministic_feature_only_decisions": 4,
+  "table_only_accuracy_upper_bound": 0.75,
+  "interpretation": "A table-specific indistinguishability bound, not model performance or market accuracy. Reference truth is authored metadata, never an input feature. Review or abstain when evidence cannot distinguish alternatives.",
+  "version": "1.2.0",
+  "original_rows": 4800,
+  "combined_rows": 4816,
+  "split_policy": "Keep original train/validation/test rows; exclude every challenge row from fitting, threshold selection and held-out metrics.",
+  "frozen_inputs_normalized_lf_sha256": {
+    "pairs.csv": "f98b00b8bcc3e52266554abe13676c8cd535e72af10aaa7d30fd414d76935349",
+    "raw_pairs.jsonl": "4debbfbc669bf37e7f6ef53a87b1fbe1da1a48f199073c93c501e4e9ec41358c",
+    "provenance.json": "842960aaedaf87e5df406c1e3f49fc714bcf9531f5a84e0e2f77f9f24c386d0a"
+  },
+  "artifact_sha256": {
+    "challenge_pairs.jsonl": "f9553f12635604e7e55dc3ee8bdaaeb2c7253115009eb5f41785d4838057a078",
+    "challenge_features.csv": "d0c7dfd2b47f02e75fd179a17439ea2b02f11b87cefc36045616ebf90eb3650a",
+    "pairs-1.2.csv": "80a5b5dffabcc71081a2662c928f283d7cd692365233ad5e898512f8f22b2eda"
+  }
+}

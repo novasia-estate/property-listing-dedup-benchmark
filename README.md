@@ -1,4 +1,4 @@
-# Property Listing Deduplication Benchmark
+# Property Listing Deduplication Benchmark — release1.2
 
 A reproducible **synthetic stress test** for a hard catalogue problem: two advertisements may describe the same apartment, while two genuinely different apartments can have nearly identical prices, floor plans and headlines.
 
@@ -46,3 +46,15 @@ Strong synthetic performance cannot establish production quality. Test on a sepa
 ## Attribution and licences
 
 Developed by [NovAsia Estate](https://novasia.estate/), a publisher of property guides and research for Cambodia, Thailand and Bali. The benchmark addresses catalogue quality and contains no property offers or client records. Code is MIT licensed; generated data is dedicated under CC0-1.0. A suggested citation is in `CITATION.cff`.
+
+## 1.2: a separate diagnostic challenge split
+
+Release1.2 retains the original4,800 pairs, generator, split and baseline report. It adds16 authored counterexamples in independent synthetic worlds. Four pairs of cases have exactly the same observations but opposite reference truth: a deterministic decision using the supplied features cannot resolve all of them. Other cases expose missing-versus-zero values, non-ASCII title tokenization, leading-zero identifiers and conflicting source observations. These are constructed stress cases, not a prevalence sample.
+
+```sh
+python src/challenge.py --data data --report reports/challenge.json
+```
+
+`data/challenge_pairs.jsonl` contains the16 observations and auditable **synthetic reference IDs** outside the observations. `data/challenge_features.csv` contains the same nine features and labels. `data/pairs-1.2.csv` preserves all original rows, then appends these16 with `split=challenge` (4,816 total). It supports distribution as the next dataset version. Keep challenge rows out of training, threshold selection and held-out scores. Never use reference IDs, case IDs, scenarios, group IDs or split as model features.
+
+`reports/challenge.json` binds the artifact checksums and reports a table-specific lower bound on mistakes from conflicting feature vectors. That bound is not the score of a trained model or a claim about the property market. The original benchmark generator and baseline remain version1.0 internally; the independently added diagnostic supplement is version1.2.
